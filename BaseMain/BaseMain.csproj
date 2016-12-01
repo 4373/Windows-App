@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ADDD141-8D00-4D60-A34D-AEF7A6465BF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseMain</RootNamespace>
+    <AssemblyName>BaseMain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\控件类\CardData.cs" />
+    <Compile Include="Common\控件类\InputType.cs" />
+    <Compile Include="Common\Patient.cs" />
+    <Compile Include="Common\控件类\DataShowType.cs" />
+    <Compile Include="Common\控件类\MoveType.cs" />
+    <Compile Include="FrmEscOrFinishGiveUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEscOrFinishGiveUp.Designer.cs">
+      <DependentUpon>FrmEscOrFinishGiveUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformedConsent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformedConsent.Designer.cs">
+      <DependentUpon>InformedConsent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultReport.Designer.cs">
+      <DependentUpon>ResultReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowYourCommunicationCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowYourCommunicationCard.Designer.cs">
+      <DependentUpon>ShowYourCommunicationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\AgreeOrNot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\AgreeOrNot.Designer.cs">
+      <DependentUpon>AgreeOrNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\OnlyNext.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\OnlyNext.Designer.cs">
+      <DependentUpon>OnlyNext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\AskWhenFinishOrEsc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\AskWhenFinishOrEsc.Designer.cs">
+      <DependentUpon>AskWhenFinishOrEsc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\PrintDataOrNot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\PrintDataOrNot.Designer.cs">
+      <DependentUpon>PrintDataOrNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\BloodPressure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\BloodPressure.Designer.cs">
+      <DependentUpon>BloodPressure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\HeightData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\HeightData.Designer.cs">
+      <DependentUpon>HeightData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\PatientAge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\PatientAge.Designer.cs">
+      <DependentUpon>PatientAge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\WaistLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\WaistLine.Designer.cs">
+      <DependentUpon>WaistLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\WeightData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataDispalyUI\WeightData.Designer.cs">
+      <DependentUpon>WeightData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\DataInput.Designer.cs">
+      <DependentUpon>DataInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\CardSelect\FourSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\CardSelect\FourSelection.Designer.cs">
+      <DependentUpon>FourSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\Number.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\KeyBoardInput\Number.Designer.cs">
+      <DependentUpon>Number.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\PrevAndNext.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\PrevAndNext.Designer.cs">
+      <DependentUpon>PrevAndNext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Report\BaseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\Report\BaseInfo.Designer.cs">
+      <DependentUpon>BaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Report\FamilyData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\Report\FamilyData.Designer.cs">
+      <DependentUpon>FamilyData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Report\HealthStation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\Report\HealthStation.Designer.cs">
+      <DependentUpon>HealthStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Report\LifeStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\Report\LifeStyle.Designer.cs">
+      <DependentUpon>LifeStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\UserProgressBar\ProgressBarUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\UserProgressBar\ProgressBarUser.Designer.cs">
+      <DependentUpon>ProgressBarUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ProgressBarParts\PBCircle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\ProgressBarParts\PBCircle.Designer.cs">
+      <DependentUpon>PBCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ProgressBarParts\PBPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\ProgressBarParts\PBPicture.Designer.cs">
+      <DependentUpon>PBPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\Title\Title.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\Title\Title.Designer.cs">
+      <DependentUpon>Title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\CardSelect\TwoSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\CardSelect\TwoSelection.Designer.cs">
+      <DependentUpon>TwoSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\UserUIAllOf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\UserUIAllOf.Designer.cs">
+      <DependentUpon>UserUIAllOf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\UserGiveUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUI\ControlMove\UserGiveUp.Designer.cs">
+      <DependentUpon>UserGiveUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmEscOrFinishGiveUp.resx">
+      <DependentUpon>FrmEscOrFinishGiveUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformedConsent.resx">
+      <DependentUpon>InformedConsent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ResultReport.resx">
+      <DependentUpon>ResultReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowYourCommunicationCard.resx">
+      <DependentUpon>ShowYourCommunicationCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\ControlMove\AgreeOrNot.resx">
+      <DependentUpon>AgreeOrNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\ControlMove\OnlyNext.resx">
+      <DependentUpon>OnlyNext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\AskWhenFinishOrEsc.resx">
+      <DependentUpon>AskWhenFinishOrEsc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\ControlMove\PrintDataOrNot.resx">
+      <DependentUpon>PrintDataOrNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\KeyBoardInput\DataDispalyUI\BloodPressure.resx">
+      <DependentUpon>BloodPressure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\KeyBoardInput\DataDispalyUI\HeightData.resx">
+      <DependentUpon>HeightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\KeyBoardInput\DataDispalyUI\PatientAge.resx">
+      <DependentUpon>PatientAge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\KeyBoardInput\DataDispalyUI\WaistLine.resx">
+      <DependentUpon>WaistLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\KeyBoardInput\DataDispalyUI\WeightData.resx">
+      <DependentUpon>WeightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\KeyBoardInput\DataInput.resx">
+      <DependentUpon>DataInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\CardSelect\FourSelection.resx">
+      <DependentUpon>FourSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\KeyBoardInput\Number.resx">
+      <DependentUpon>Number.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\ControlMove\PrevAndNext.resx">
+      <DependentUpon>PrevAndNext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\Report\BaseInfo.resx">
+      <DependentUpon>BaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\Report\FamilyData.resx">
+      <DependentUpon>FamilyData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\Report\HealthStation.resx">
+      <DependentUpon>HealthStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\Report\LifeStyle.resx">
+      <DependentUpon>LifeStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\UserProgressBar\ProgressBarUser.resx">
+      <DependentUpon>ProgressBarUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\ProgressBarParts\PBCircle.resx">
+      <DependentUpon>PBCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\ProgressBarParts\PBPicture.resx">
+      <DependentUpon>PBPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\Title\Title.resx">
+      <DependentUpon>Title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\CardSelect\TwoSelection.resx">
+      <DependentUpon>TwoSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\UserUIAllOf.resx">
+      <DependentUpon>UserUIAllOf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUI\ControlMove\UserGiveUp.resx">
+      <DependentUpon>UserGiveUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SampImag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b6055d33ef4435477c0e4e74696162d4.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
