@@ -1,1 +1,5 @@
-# a app with c# winform
+# c# 做的一个简单的问卷调查app
+![1](./q4.png)
+![2](./q3.png)
+![3](./q.png)
+![4](./r.png)
